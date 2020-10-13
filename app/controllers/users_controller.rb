@@ -20,7 +20,7 @@ class Usersontroller < ApplicationController
             }
         else 
             render json: {
-                status 500, 
+                status: 500, 
                 errors: ['user not found']
             }
         end

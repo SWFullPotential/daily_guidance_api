@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+    include ActionController::Helpers 
+    include ActionController::Cookies
     skip_before_action :verify_authenticity_token
 
     helper_method :login!, :logged_in?, :current_user, :authorized_user?, :logout!, :set_user 

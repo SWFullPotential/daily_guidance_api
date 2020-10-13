@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
             login!
             render json: {
                 logged_in: true, 
-                user: @user
+                user: {id:@user.id, username:@user.username}
             }
         else 
             render json: {

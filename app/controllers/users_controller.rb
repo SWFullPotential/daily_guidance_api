@@ -1,4 +1,4 @@
-class Usersontroller < ApplicationController 
+class UsersController < ApplicationController 
     def index 
         @users = User.all
             if @users 

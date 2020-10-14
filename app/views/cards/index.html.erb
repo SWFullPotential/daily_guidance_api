@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th>Type</th>
+      <th>Card Type</th>
       <th>Name short</th>
       <th>Name</th>
       <th>Value</th>
@@ -18,7 +18,7 @@
   <tbody>
     <% @cards.each do |card| %>
       <tr>
-        <td><%= card.type %></td>
+        <td><%= card.card_type %></td>
         <td><%= card.name_short %></td>
         <td><%= card.name %></td>
         <td><%= card.value %></td>

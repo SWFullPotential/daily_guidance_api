@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  name_short: MyString
+  name: MyString
+  value: 1
+  meaning_up: MyString
+  meaning_rev: MyString
+
+two:
+  type: 
+  name_short: MyString
+  name: MyString
+  value: 1
+  meaning_up: MyString
+  meaning_rev: MyString

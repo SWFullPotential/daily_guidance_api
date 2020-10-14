@@ -17,7 +17,7 @@ class UsersController < ApplicationController
         if @user
             render json: {
                 user: {id:@user.id, username:@user.username}}
-            }
+            
         else 
             render json: {
                 status: 500, 

@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(version: 2020_10_14_031433) do
   enable_extension "plpgsql"
 
   create_table "cards", force: :cascade do |t|
-    t.string "type"
-    t.string "name_short"
     t.string "name"
-    t.integer "value"
+    t.string "name_short"
+    t.string "value"
+    t.integer "value_int"
     t.string "meaning_up"
     t.string "meaning_rev"
+    t.string "card_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

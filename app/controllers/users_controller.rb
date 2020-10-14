@@ -3,7 +3,7 @@ class UsersController < ApplicationController
         @users = User.all
             if @users 
                 render json: {
-                    users: @users
+                    users: {id:@user.id, username:@user.username}
                 }
             else
                 render json: {

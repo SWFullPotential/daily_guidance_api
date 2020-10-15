@@ -4,10 +4,27 @@ class CardsController < ApplicationController
   # GET /cards
   def index
     @cards = Card.all
+    if @cards 
+      render json: @cards
+    else
+        render json: {
+            status: 500, 
+            errors: ['no cards found']
+        }
+    end
   end
 
   # GET /cards/1
   def show
+    @card = User.find(params[:id])
+    if @card 
+      render json: @card 
+    else 
+      render json: {
+        status: 500, 
+        errors: ['user not found']
+      }
+    end
   end
 
   # GET /cards/new
@@ -24,9 +41,12 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
 
     if @card.save
-      redirect_to @card, notice: 'Card was successfully created.'
+      render json: @card 
     else
-      render :new
+      render json: {
+        status: 500, 
+        errors: @card.errors.full_messages
+      }
     end
   end
 

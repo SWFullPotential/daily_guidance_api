@@ -11,5 +11,5 @@ development:
   database: daily_guidance_api_test
 production:
   adapter: postgresql
-  database: db/production
+  database: daily_guidance_api_development
   
